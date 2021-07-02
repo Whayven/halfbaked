@@ -1,0 +1,36 @@
+<header>
+  <div class="nav-container">
+          <a routerLink="/./components/merchandise.component">Home</a>
+          <a routerLink="/./components/calculator.component">Calculator</a>
+          <a routerLink="/./components/cart.component">Cart</a>
+  </div>
+</header>
+
+<div id="form-container">
+  <p>Thank you for choosing Half Baked Kitchen. Please place your order via the form below. Be prepared to pay at the time of pickup.</p>
+  <form action="mailto: dawgsfan97@live.com">
+
+    <div class="container">
+      <label>Name: </label>
+      <input type="text" placeholder="Mary">
+    </div>
+
+    <div class="container">
+      <label>Email Address: </label>
+      <input type="email" placeholder="mary@halfbaked.club">
+    </div>
+
+    <div class="container">
+      <label>Phone Number: </label>
+      <input type="phone" placeholder="Mary">
+    </div>
+
+    <select name="merchandiseSelector" id="merchSelector">
+      <option>Brownie</option>
+      <option>Cookie</option>
+      <option>Ceareal Bar</option>
+    </select>
+    <button (click)="placeOrder()" [routerLink]="['/./components/cart.component']" routerLinkActive="router-link-active"> Submit </button>
+  </form>
+</div>
+<router-outlet></router-outlet>
