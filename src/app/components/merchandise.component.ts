@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
 })
 export class MerchandiseComponent {
 
-    showing = true;
+  showing = true; 
 
   hide(){
     //method to hide DOM elements
@@ -17,4 +17,5 @@ export class MerchandiseComponent {
     //authenticate user
     this.hide();
   }
+
 }

@@ -1,14 +1,22 @@
 <header>
-    <div class="nav-container">
-            <a routerLink="/./components/merchandise.component">Home</a>
-            <a routerLink="/./components/calculator.component">Calculator</a>
-            <a routerLink="/./components/cart.component">Cart</a>
-    </div>
-  </header>
-<div class="container">
-    <h2>Cart</h2>
-    <h3>Total due at pickup: totalPrice</h3>
-    <p> Thank you, we have received your order. We will be in contact shortly.</p>
-</div>
+  <div class="nav-container">
+    <a routerLink="/./components/merchandise.component">Home</a>
+    <a routerLink="/./components/calculator.component">Calculator</a>
+    <a routerLink="/./components/cart.component">Cart</a>
+  </div>
+</header>
 
+<body> 
+  <div id="checkout-container">
+    <h2>Cart</h2>
+    <ul>
+      <li>{{ merchandise }}</li>
+    </ul>
+    <button (click)="checkout()">Checkout</button>
+  </div>
+  <div id="confirmation" *ngIf="showing">
+    <h3>Total due at pickup: ${{ totalPrice }} </h3>
+    <p> Thank you, we have received your order. We will be in contact shortly.</p>
+  </div>
+</body>
 <router-outlet></router-outlet>

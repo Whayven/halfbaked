@@ -6,8 +6,24 @@ a {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     margin: 5px;
+}
+
+.calc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+#calcButton {
+    margin: 15px;
+} 
+
+.container-label {
+    justify-content: start;
 }
 
 .nav-container {
@@ -24,6 +40,13 @@ a {
 }
 
 #form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkout-container {
     display: flex;
     flex-direction: column;
     align-items: center;

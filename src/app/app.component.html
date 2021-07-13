@@ -3,15 +3,15 @@
   <h1>Half Baked Kitchen</h1>
   <div id="login-container" class="container" *ngIf ="showing">
     <div class="container">
-      <label class="container-label">Username: </label>
-      <input type="text">
+      <label class="container-label">Email: </label>
+      <input id="email" type="email" (keyup)="onEmailChange($event)">
     </div>
     <div class="container">
       <label class="container-label">Password: </label>
-      <input type="password">
+      <input type="password" id="password" (keyup)="onPasswordChange($event)">
     </div>
     <div class="container">
-      <button (click)="login()" [routerLink]="['/./components/merchandise.component']" routerLinkActive="router-link-active">Login</button>
+      <button (click)= "login()" [routerLink]= "['././components/merchandise.component']" routerLinkActive="router-link-active">Login</button>
     </div>
   </div>
   <!-- <signup></signup>
